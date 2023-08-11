@@ -69,7 +69,7 @@ class Pizza {
 }
 
 const pizza1 = new Pizza('traditional', 'tomato', 'pepperoni', 'cheedar');
-const pizza2 = new Pizza('integral', 'pesto', 'chicken', 'cheedar', 'traditional');
+const pizza2 = new Pizza('integral', 'pesto', 'chicken', 'cheedar');
 const pizza3 = new Pizza('')
 console.log(pizza1);
 console.log(pizza1.getDesc());
@@ -78,3 +78,19 @@ console.log(pizza2.getDesc());
 console.log(pizza2.getTotalPricePizza());
 console.log(pizza3.getDesc());
 console.log(pizza3.getTotalPricePizza());
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+class Calculator {
+    add(a,b){
+        return a + b;
+    }
+    multiply(a,b){
+        return a * b;
+    }
+    divide(a,b){
+        return a/b;
+    }
+}
+const calculator = new Calculator();
+console.log(calculator.add(2,3));
+const multiply = calculator.multiply(2,3);
+console.log(multiply);
