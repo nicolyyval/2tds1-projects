@@ -80,17 +80,101 @@ console.log(pizza3.getDesc());
 console.log(pizza3.getTotalPricePizza());
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 class Calculator {
-    add(a,b){
+    add(a, b) {
         return a + b;
     }
-    multiply(a,b){
+    multiply(a, b) {
         return a * b;
     }
-    divide(a,b){
-        return a/b;
+    divide(a, b) {
+        return a / b;
     }
 }
 const calculator = new Calculator();
-console.log(calculator.add(2,3));
-const multiply = calculator.multiply(2,3);
+console.log(calculator.add(2, 3));
+const multiply = calculator.multiply(2, 3);
 console.log(multiply);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Witch {
+    constructor(name, patron, house, wand) {
+        this.name = name;
+        this.patron = patron;
+        this.house = house;
+        this.wand = wand;
+        this.spellLearned = [];
+    }
+    getName() {
+        return `O nome do(a) bruxo(a) é: ${this.name}`;
+    }
+    getPatron() {
+        return `O patrono do(a) bruxo(a) é: ${this.patron}`;
+    }
+    getHouse() {
+        return `A casa do(a) bruxo(a) é: ${this.house}`;
+    }
+    getWand() {
+        return `A varinha do(a) bruxo(a) é: ${this.wand}`;
+    }
+    learnedASpell(spell) {
+        this.spellLearned.push(spell);
+        console.log(`O(a) bruxo(a) ${this.name} aprendeu o feitiço ${spell}`);
+    }
+}
+
+// const witch1 = new Witch('Hermione Granger', 'Otter', 'Gryffindor', 'Vine wood and dragon heartstring');
+// console.log(witch1);
+// witch1.learnedASpell("Accio");
+// witch1.learnedASpell("Wingardium Leviosa");
+// witch1.learnedASpell("Expectro Patronum");
+// witch1.learnedASpell("Expelliarmus");
+
+class TypeWitch extends Witch {
+    constructor(name, patron, house, wand, typeWitch) {
+        super(name, patron, house, wand);
+        this.TypeWitch = typeWitch.toUpperCase();
+    }
+    getTypeWitch() {
+        if (this.typeWitch == 'M') {
+            return `O tipo de bruxo(a) é:
+            ${this.typeWitch} - Muggle`;
+        } else if (this.typeWitch == 'P') {
+            return `O tipo de bruxo(a) é: ${type.witch1} - Puro`;
+        } else {
+            return `Não é um bruxo(a)`;
+        }
+    }
+}
+const witch1 = new TypeWitch('Hermione Granger', 'Otter', 'Gryffindor', 'Vine wood dragon heartstring', 'm');
+console.log(witch1);
+console.log(witch1.getTypeWitch());
+
+class ChamberOfSecret {
+    constructor(name, pwd) {
+        this.name = name;
+        let _pwd = pwd; // atributo privado (//);
+
+        this.checkPwd = (pwdInput) => {
+            if (_pwd == pwdInput) {
+                return `Bem vindo(a) ${this.name} a Câmara Secreta`;
+            } else {
+                return `Você é um trouxa e não tem acesso a Câmara Secreta`;
+            }
+        }
+    }
+    // método público 
+    acessChamber(pwdInput) {
+        if (this.checkPwd(pwdInput)) {
+            return `Bem Vindo(a) ${this.name} a câmara secreta!🐍`;
+        } else {
+            return `Senha incorreta 😒`;
+        }
+    }
+    showName() {
+        return this.name;
+    }
+}
+const harry = new ChamberOfSecret('Harry Potter', '1234');
+let inputPdw = '1234'
+console.log(harry.acessChamber('inputPwd'));
