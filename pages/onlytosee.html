@@ -1,0 +1,143 @@
+<body>
+    <main>
+        <section id="picture">
+            <img src="assets/images/picture.svg" alt="pessoas aleatórias treinando" />
+        </section>
+        <section id="calculator">
+            <div id="form">
+                <h1>Calculadora - IMC</h1>
+                <div class="input-box">
+                    <label for="weight">Peso em kg</label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-weight-hanging icon"></i>
+                        <input type="number" id="weight" name="weight" required />
+                        <span class="unit">kg</span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="height">Altura em metros</label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-ruler icon"></i>
+                        <input type="number" id="height" name="height" required />
+                        <span class="unit">m</span>
+                    </div>
+                </div>
+                <button id="calculate">Calcular</button>
+            </div>
+        </section>
+    </main>
+</body>n
+</html>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/*Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #18181b;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    gap: 3.5rem;
+}
+
+#picture img {
+    width: 31rem;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    color: #f8fafc;
+    background-color: #262626;
+    border-radius: 8px;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    position: relative;
+}
+
+h1::after {
+position: absolute;
+content: "";
+width: 8rem;
+height: 3px;
+background-color: #fd1b1b;
+border-radius: 3px;
+left: 0;
+bottom: 0;
+}
+
+.input-box label {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3f3f46;
+    padding: 0.3rem;
+    border-radius: 3px;
+    margin-top: 3px;
+}
+
+.unit,
+.icon {
+    color: #cbd5e1;
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+}
+
+.input-field input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
+    color: #f8fafc;
+    padding: 0 0.5rem;
+}
+
+.input-field input:focus {
+    outline: focus;
+}
+
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+#calculate {
+    background-color: #fd1b1b;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #f8fafc;
+    padding: 0.5rem 0;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
