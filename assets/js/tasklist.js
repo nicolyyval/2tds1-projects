@@ -1,69 +1,21 @@
-const posts  = [];
-let indexPost = -1;
-function add() {
-    const tarefa = document.getElementById("tarefa").value;
-}
-if (indexPost == -1) {
-    if (tarefa) {
-        storePost(tarefa);
-        cleanFields();
-    }
-} else {
-    if (tarefa) {
-        posts[indexPost] = {
-            tarefa,
-        };
-
-        add();
-        indexPost = -1;
-        cleanFields();
-
+class Task {
+    constructor(id, title, status){
+        this.id = id;
+        this.title = title;
+        this.status = status;
     }
 }
-
-function storePost(tarefa) {
-    const post = {
-        tarefa,
-    };
-    posts.push(post);
-    add();
-
-}
-
-function add() {
-    document.getElementById("list").classList.remove("hidden");
-    if (posts.length == 0) {
-        document.getElementById("list").classList.add("hidden");
+class TaskList {
+    constructor() {
+        this.tasks = [];
     }
-    let showContent = "";
-
-    posts.forEach((post, index) => {
-        showContent += `
-    <div class="">
-        <p><strong>Resumo:</strong>${post.tarefa}</p>
-        <button onclick="editPost(${index})">Editar</button>
-        <button onclick="removePost(${index})">Remover</button>
-    </div>
-        `;
-    })
-
-    document.getElementById("list").innerHTML = showContent;
+    addTask(param) {
+        this.tasks.push(param);
+    }
 }
-
-function cleanFields() {
-    document.getElementById("tarefa").value = "";
-}
-
-function editPost(index) {
-    indexPost = index;
-
-    const post = posts[index];
-
-    document.getElementById("tarefa").value = post.tarefa;
-}
-
-function removePost(index) {
-    posts.splice(index, 1);
-
-    add();
-}
+ const veryBigTaskList = new TaskList();
+ function createTask(){
+    const taskTitle = document.getElementById("newTask").value;
+    const task = new Task(1, taskTitle, false);
+    veryBigTaskList.addTask(task);
+ }
