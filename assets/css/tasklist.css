@@ -14,7 +14,7 @@ body {
 }
 
 main {
-    background-color: #1d1c1c;
+    background-color: #272525b5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +27,6 @@ main {
     margin-top: 40px;
     border-radius: 8px;
 }
-
 
 #answers {
     flex-direction: column;
