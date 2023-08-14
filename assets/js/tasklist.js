@@ -62,7 +62,7 @@ function renderTasks() {
             </li>`
     });
 
-    document.getElementById("result").innerHTML = element;
+    document.getElementById("add").innerHTML = element;
 }
 
 function deleteTask(id) {
@@ -73,3 +73,4 @@ function deleteTask(id) {
 function doneTask(id) {
     veryBigList.markTask(id);
 }
+
