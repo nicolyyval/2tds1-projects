@@ -90,3 +90,28 @@ main {
     width: 55%;
     border: transparent;
 }
+#list {
+    max-width: 500px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+}
+
+.post {
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.post h2 {
+    background-color: #2a2a2a;
+    margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
