@@ -123,12 +123,12 @@ class Witch {
     }
 }
 
-// const witch1 = new Witch('Hermione Granger', 'Otter', 'Gryffindor', 'Vine wood and dragon heartstring');
-// console.log(witch1);
-// witch1.learnedASpell("Accio");
-// witch1.learnedASpell("Wingardium Leviosa");
-// witch1.learnedASpell("Expectro Patronum");
-// witch1.learnedASpell("Expelliarmus");
+ const witch1 = new Witch('Hermione Granger', 'Otter', 'Gryffindor', 'Vine wood and dragon heartstring', 'm');
+ console.log(witch1);
+ witch1.learnedASpell("Accio");
+ witch1.learnedASpell("Wingardium Leviosa");
+ witch1.learnedASpell("Expectro Patronum");
+ witch1.learnedASpell("Expelliarmus");
 
 class TypeWitch extends Witch {
     constructor(name, patron, house, wand, typeWitch) {
@@ -146,9 +146,9 @@ class TypeWitch extends Witch {
         }
     }
 }
-const witch1 = new TypeWitch('Hermione Granger', 'Otter', 'Gryffindor', 'Vine wood dragon heartstring', 'm');
-console.log(witch1);
 console.log(witch1.getTypeWitch());
+console.log(witch1);
+
 
 class ChamberOfSecret {
     constructor(name, pwd) {
