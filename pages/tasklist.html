@@ -8,16 +8,18 @@
     <script src="../assets/js/tasklist.js"></script>
     <title>Task List</title>
 </head>
+
 <body>
     <main>
-            <div class="input-field">
-                <section id="answers">
-                    <input type="text" id="tarefa" required placeholder="Adicione uma nova tarefa">
-                </section>
-            </div>
-            <section>
-                <button id="add">+</button>
+        <div class="input-field">
+            <section id="answers">
+                <input type="text" id="tarefa" name="tarefa" placeholder="Adicione uma nova tarefa" required />
             </section>
+        </div>
+        <section>
+            <button id="add" onclick="add()">+</button>
+        </section>
+        <div id="list" class="hidden"></div>
     </main>
 </body>
 
