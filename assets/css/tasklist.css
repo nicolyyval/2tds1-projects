@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #181818;
+
+}
+
+main {
+    background-color: #1d1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 70vh;
+    gap: 3.5rem;
+    margin-left: 90px;
+    margin-left: 60px;
+    margin-bottom: 100px;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+
+#answers {
+    flex-direction: column;
+    color: #f8fafc;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    gap: 0.4rem;
+    padding: 1rem;
+}
+
+
+#tarefa {
+    background-color: #2a2a2a;
+    border-color: transparent;
+    border: none;
+    width: 200%;
+    font-size: 1.8rem;
+    color: #f0f0f0;
+    padding: 0 0.5rem;
+}
+
+.unit,
+.icon {
+    color: #f0f0f0;
+    font-size: 1.3rem;
+    padding: 0.1rem 26rem;
+    margin-left: 1rem;
+
+}
+
+.input-field {
+    background-color: #2a2a2a;
+    width: 80%;
+    display: flex;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+
+.input-field input:focus {
+    outline: focus;
+}
+
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+#add {
+    background-color: #2a2a2a;
+    margin-right: 80px;
+    margin-left: -30px;
+    margin-top: 3px;
+    height: 75px;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #f0f0f0;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 55%;
+    border: transparent;
+}
