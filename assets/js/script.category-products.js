@@ -68,10 +68,17 @@ class ProductService {
         const id = this.nextProductId;
         this.nextProductId++;
 
+
         const product = new Product(id, name, price, category);
 
         this.products.push(product);
         category.products.push(product);
+    }
+
+    // R => Read
+
+    getProductById(id) {
+        return this.products.find((product) => product.id == id);
     }
 }
 
