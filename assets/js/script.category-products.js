@@ -47,6 +47,15 @@ class CategoryService {
         const category = this.getCategoryById(id);
         category.name = name;
     }
+
+    //D => Delete
+
+    deleteCategory(id) {
+        const category = this.getCategoryById(id);
+        const index = this.categories.indexOf(category);
+
+        this.categories.splice(index, 1);
+    }
 }
 
 class ProductService {
@@ -89,12 +98,12 @@ function createProduct() {
     console.log(productsList.products);
 }
 
-    function findCategory(id) {
-        const category = categoriesList.getCategoryById(id);
-        console.log(category.name);
-    }
+function findCategory(id) {
+    const category = categoriesList.getCategoryById(id);
+    console.log(category.name);
+}
 
-    function editCategory(id, name) {
-        categoriesList.updateCategory(id, name);
-        console.log(categoriesList.categories);
-    }
+function editCategory(id, name) {
+    categoriesList.updateCategory(id, name);
+    console.log(categoriesList.categories);
+}
