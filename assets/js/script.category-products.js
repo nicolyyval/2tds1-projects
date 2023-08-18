@@ -24,6 +24,9 @@ class CategoryService {
         this.nextCategoryId = 1;
     }
 
+    // CRUD  => Create, Read, Update, Delete
+    //C => create
+
     addCategory(name) {
         const id = this.nextCategoryId;
         this.nextCategoryId++;
@@ -32,6 +35,11 @@ class CategoryService {
         this.categories.push(category);
     }
 
+    // R => Read
+    
+    getCategoryById(id) {
+        return this.categories.find((category) => category.id == id);
+    }
 }
 
 class ProductService {
@@ -56,9 +64,12 @@ const productsList = new ProductService();
 
 function createCategory() {
     const categoryName = "Candies";
+    const categoryName2 = "Shoes";
+    const categoryName3 = "MakeUp";
 
     categoriesList.addCategory(categoryName);
-
+    categoriesList.addCategory(categoryName2);
+    categoriesList.addCategory(categoryName3);
     console.log(categoriesList.categories);
 }
 
