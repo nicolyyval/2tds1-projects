@@ -1,1 +1,0 @@
-# Posts with Javascript Objects
