@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/script.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Object Posts</title>
+</head>
+
+<body>
+    <main>
+        <h1>Próximos Posts</h1>
+        <div id="postForm">
+            <div>
+                <label for="title">Título</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div>
+                <label for="resume">Resumo</label>
+                <textarea type="text" id="resume" name="resume" rows="4" required></textarea>
+            </div>
+            <div>
+                <label for="publisher">Autor</label>
+                <input type="text" id="publisher" name="publisher" required>
+            </div>
+            <div>
+                <label for="date">Data de publicação</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <button onclick="savePost()">Cadastrar</button>
+        </div>
+        <div id="list" class="hidden"></div>
+    </main>
+</body>
+
+</html>
