@@ -89,6 +89,7 @@ function createCategory() {
 const categoryName = document.getElementById("categoryNameInput").value;
 
     categoriesList.addCategory(categoryName);
+    displayCategories();
     clearFields();
     console.log(categoriesList.categories);
 }
@@ -132,6 +133,14 @@ function deleteCategory(id) {
 function findProduct(id) {
     const product = productsList.getProductById(id);
     console.log(product.name);
+}
+
+function displayCategories() {
+    let content = "";
+    categoriesList.categories.forEach((category) => {
+        content += `<li>${category.name}</li>`;
+    });
+    document.getElementById("categoriesList").innerHTML = content;
 }
 
 function clearFields() {
